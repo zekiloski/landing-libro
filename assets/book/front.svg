@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1200" viewBox="0 0 800 1200">
+  <rect width="800" height="1200" fill="#b8643a"/>
+  <rect x="40" y="40" width="720" height="1120" fill="none" stroke="#f4f0e8" stroke-width="2" opacity=".5"/>
+  <text x="400" y="520" text-anchor="middle" font-family="Georgia, serif" font-size="84" fill="#f4f0e8">Título</text>
+  <text x="400" y="620" text-anchor="middle" font-family="Georgia, serif" font-size="84" fill="#f4f0e8">del Libro</text>
+  <text x="400" y="760" text-anchor="middle" font-family="Georgia, serif" font-size="30" letter-spacing="8" fill="#f4f0e8">NOMBRE DEL AUTOR</text>
+  <text x="400" y="1110" text-anchor="middle" font-family="Georgia, serif" font-size="22" letter-spacing="6" fill="#f4f0e8" opacity=".6">TAPA</text>
+</svg>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Título del Libro — Nombre del Autor</title>
+  <meta name="description" content="Título del Libro, de Nombre del Autor.">
+  <meta name="theme-color" content="#0e0d0b">
+
+  <link rel="preload" as="image" href="assets/hero/01.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- 1. Hero: secuencia rápida de imágenes a pantalla completa -->
+  <header class="hero" id="inicio">
+    <canvas class="hero__canvas" aria-hidden="true"></canvas>
+    <div class="hero__shade" aria-hidden="true"></div>
+
+    <nav class="hero__nav" aria-label="Principal">
+      <a class="wordmark" href="#inicio">Nombre del Autor</a>
+      <a class="nav-link" href="#conectar">Conectar</a>
+    </nav>
+
+    <div class="hero__text">
+      <p class="eyebrow">Un libro de Nombre del Autor</p>
+      <h1 class="hero__title">Título del Libro</h1>
+      <p class="hero__lede">Una línea breve que acompaña la imagen.</p>
+    </div>
+
+    <a class="hero__cue" href="#libro">Descubrir</a>
+
+    <button class="hero__toggle" type="button" aria-pressed="false" aria-label="Pausar secuencia de imágenes">
+      <span class="hero__toggle-icon" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- 2. Libro -->
+    <section class="book" id="libro" aria-labelledby="libro-titulo">
+      <div class="book__covers reveal">
+        <img class="book__cover book__cover--back" src="assets/book/back.svg" width="800" height="1200" alt="Contratapa de Título del Libro" loading="lazy" decoding="async">
+        <img class="book__cover book__cover--front" src="assets/book/front.svg" width="800" height="1200" alt="Tapa de Título del Libro" loading="lazy" decoding="async">
+      </div>
+
+      <div class="book__copy reveal">
+        <p class="eyebrow">El libro</p>
+        <h2 class="section-title" id="libro-titulo">Título del Libro</h2>
+        <p>Un párrafo corto que presenta el libro. Dos o tres frases alcanzan: de qué trata, para quién es y por qué importa ahora.</p>
+        <p>Una segunda idea, si hace falta. El resto lo dicen las imágenes.</p>
+        <p class="book__meta">Nombre del Autor · Editorial · 2026</p>
+      </div>
+    </section>
+
+    <!-- 3. Llamada a la acción -->
+    <section class="cta" id="conectar" aria-labelledby="cta-titulo">
+      <div class="cta__inner reveal">
+        <p class="eyebrow">Conectar</p>
+        <h2 class="section-title" id="cta-titulo">Conversemos.</h2>
+        <p class="cta__lede">Dejá tus datos y contanos un poco más. Respondemos personalmente.</p>
+
+        <!--
+          data-endpoint: URL que recibe el envío (Formspree, Web3Forms, Basin, función propia…).
+          Vacío = modo demo: valida y muestra el mensaje de éxito sin enviar nada.
+        -->
+        <form class="form" data-endpoint="" novalidate>
+          <div class="field">
+            <label for="f-nombre">Nombre</label>
+            <input id="f-nombre" name="nombre" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" required>
+          </div>
+          <div class="field">
+            <label for="f-pregunta">¿Qué te trajo hasta acá?</label>
+            <textarea id="f-pregunta" name="pregunta" rows="3" required></textarea>
+          </div>
+
+          <!-- Honeypot anti-spam: oculto para personas -->
+          <div class="form__trap" aria-hidden="true">
+            <label for="f-web">No completar</label>
+            <input id="f-web" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button class="button" type="submit">Enviar</button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Nombre del Autor</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
