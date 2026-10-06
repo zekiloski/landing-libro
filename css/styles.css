@@ -65,7 +65,7 @@ p { margin: 0 0 1.1em; }
   overflow: hidden;
   color: #fff;
   /* Respaldo sin JS y mientras cargan las imágenes */
-  background: var(--ink) url("../assets/hero/01.svg") center / cover no-repeat;
+  background: var(--ink) url("../assets/hero/01.jpg") center / cover no-repeat;
 }
 
 .hero__canvas,
